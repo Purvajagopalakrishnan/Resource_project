@@ -10,7 +10,9 @@ export class LoginComponent implements OnInit {
   pageTitle = 'Resources Management system';
   loginForm: FormGroup;
   submitted = false;
-
+  get form() { 
+    return this.loginForm.controls;
+   }
   constructor(  private formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -19,9 +21,7 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     });
   }
- get form() { 
-   return this.loginForm.controls;
-  }
+ 
   onSubmit() {
     this.submitted = true;
     if (this.loginForm.invalid) {

@@ -1,25 +1,20 @@
-.title {
-    text-align: center;
-    color: rgb(238, 105, 28);
-}
-body {
+.login-body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(161, 219, 219);
     margin-left: 20px;
 }
-form {
+.login-form {
     border: 3px solid gray;
     text-align: center;
 }
-input[type=text], input[type=password] {
+.login-input {
     width: 40%;
     padding: 12px 20px;
     margin: 8px;
-    display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     box-sizing: border-box;
 }
-button {
+.key {
     background-color: green;
     color: white;
     padding: 14px 20px;
@@ -28,7 +23,7 @@ button {
     cursor: pointer;
     width: 10%;
 }
-button:hover {
+.key:hover {
     opacity: 0.7;
 }
 .container {
@@ -38,7 +33,7 @@ button:hover {
 .validator {
     color: red;
 }
-label {
+.form-label {
     display: inline-block;
     width: 140px;
     text-align: right 
