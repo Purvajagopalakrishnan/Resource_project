@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
+import { ResourceDetailsService } from '../services/resource-details.service';
 
 @Component({
   selector: 'app-resource-list',
@@ -13,13 +13,13 @@ export class ResourceListComponent implements OnInit {
   public show_table: boolean = false
   pageTitle= "Resources Management System";
 
-  constructor(private authservice: AuthenticationService, private router:Router) { }
+  constructor(private getresourceservice: ResourceDetailsService, private router:Router) { }
 
   ngOnInit() {
   }
   OnClickmobile(){
     this.show_table = !this.show_table;
-    this.authservice.getMobilelist()
+    this.getresourceservice.getMobilelist()
     .subscribe(
       resources => {
         this.resources = resources;
@@ -32,7 +32,7 @@ export class ResourceListComponent implements OnInit {
   }
   OnClicklaptop(){
     this.show_table = !this.show_table;
-    this.authservice.getLaptoplist()
+    this.getresourceservice.getLaptoplist()
     .subscribe(
       resources => {
         this.resources = resources;

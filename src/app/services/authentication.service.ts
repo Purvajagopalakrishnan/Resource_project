@@ -8,13 +8,8 @@ export class AuthenticationService {
   private userUrl = ("http://localhost:64539/api/login")
 
   constructor(private http: HttpClient) { }
+  
   login(email_id: string, password: string) {
     return this.http.post(this.userUrl,{Email: email_id, Password: password})
-  }
-  getMobilelist(){
-    return this.http.get("http://localhost:64539/api/login/GetMobilelist");
-  }
-  getLaptoplist(){
-    return this.http.get("http://localhost:64539/api/login/GetLaptoplist");
   }
 }
