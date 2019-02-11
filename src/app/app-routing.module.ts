@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ResourceListComponent } from './resource-list/resource-list.component';
 
+
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: LoginComponent},
   {path: 'Resourcelist', component: ResourceListComponent}

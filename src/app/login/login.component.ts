@@ -8,6 +8,7 @@ import { AuthenticationService } from '../services/authentication.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
   pageTitle = 'Resources Management system';
   loginForm: FormGroup;
@@ -31,7 +32,7 @@ export class LoginComponent implements OnInit {
           console.log(data);
           if(data==true)
           {
-            this.router.navigate(['Resourcelist']);
+            this.router.navigate(['/Resourcelist']);
           }
           else{
             alert("invalid username or password");
