@@ -1,0 +1,20 @@
+<div class="title">
+    <h1>{{pageTitle}}</h1>
+</div>
+<body>
+  <button class="resource-button" type="submit" (click)="OnClickmobile()">Mobiles</button> |
+  <button class="resource-button" type="submit" (click)="OnClicklaptop()">Laptops</button><br><br>
+  <div *ngIf="show_table">
+    <table class="resource-table">
+      <tr>
+        <th class="resource-th">Id</th>
+        <th class="resource-th">Resource Name</th>
+        <th class="resource-th">Availability</th>
+      <tr *ngFor="let resource of resources">
+        <td class="resource-td">{{resource.ResourceId}}</td>
+        <td class="resource-td">{{resource.Resource_Name}}</td>
+        <td class="resource-td">{{resource.Availability}}</td>
+       </tr>
+    </table>
+  </div>
+</body>
